@@ -3,11 +3,11 @@ package com.subhamsql.mysqljpa.dao;
 import com.subhamsql.mysqljpa.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.List;
+import java.util.Set;
 
 public interface UserRepository extends JpaRepository<User, String> {
 
-    List<User> findByEmailContaining(String email);
+    Set<User> findByEmailContaining(String email);
 
-    List<User> findByNameContaining(String name);
+    Set<User> findByNameContaining(String name);
 }
