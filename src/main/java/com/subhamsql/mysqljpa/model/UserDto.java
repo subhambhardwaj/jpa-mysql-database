@@ -1,12 +1,6 @@
 package com.subhamsql.mysqljpa.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-
-@Entity
-public class User {
-
-    @Id
+public class UserDto {
     private String username;
 
     private String name;
@@ -14,25 +8,6 @@ public class User {
     private String email;
 
     private String language;
-
-    public User() {}
-
-    public User(String username, String name, String email, String language) {
-        this.username = username;
-        this.name = name;
-        this.email = email;
-        this.language = language;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "username='" + username + '\'' +
-                ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", language='" + language + '\'' +
-                '}';
-    }
 
     public String getUsername() {
         return username;
